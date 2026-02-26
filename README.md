@@ -1,0 +1,2 @@
+# JAVASCRIPT_PROJECT
+Basic_mini_Project
