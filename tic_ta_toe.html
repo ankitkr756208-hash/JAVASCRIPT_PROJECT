@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <style>
+        :root {
+            --bg: #548687;
+            --panel: #477677;
+            --text: #f6f6e9;
+            --accent: #b0413e;
+            --button: #191913;
+            --button-hover: #2f2f25;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+        }
+
+        main {
+            width: min(94vw, 560px);
+            background: var(--panel);
+            border-radius: 1rem;
+            box-shadow: 0 0.9rem 2rem rgba(0, 0, 0, 0.25);
+            padding: 1.2rem;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-bottom: 0.7rem;
+        }
+
+        #status {
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .game {
+            width: min(86vw, 420px);
+            height: min(86vw, 420px);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.65rem;
+        }
+
+        .box {
+            border-radius: 0.9rem;
+            border: none;
+            box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+            font-size: clamp(2rem, 9vw, 4rem);
+            font-weight: 700;
+            color: var(--accent);
+            background: #fff;
+            cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .box:hover:enabled {
+            transform: translateY(-2px);
+            background-color: #f2f2f2;
+        }
+
+        .controls {
+            display: flex;
+            gap: 0.7rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1rem;
+            min-width: 120px;
+            font-size: 1rem;
+            background-color: var(--button);
+            color: #fff;
+            border-radius: 0.8rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--button-hover);
+        }
+
+        .msg-container {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            padding: 1rem;
+        }
+
+        #msg {
+            font-size: clamp(1.1rem, 4vw, 1.7rem);
+            color: #ffffc7;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        @media (max-width: 420px) {
+            main {
+                padding: 1rem 0.8rem;
+            }
+
+            .game {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                min-width: 105px;
+                font-size: 0.95rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="new-btn" class="btn">New Game</button>
+    </div>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <p id="status">Current Turn: O</p>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="reset-btn" class="btn">Reset Game</button>
+            <button id="sound-btn" class="btn">Sound: ON</button>
+        </div>
+    </main>
+    <script src="tic _tac_toe.js"></script>
+</body>
+</html>
