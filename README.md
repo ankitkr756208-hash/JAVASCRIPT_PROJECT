@@ -70,7 +70,7 @@ cd JAVASCRIPT_PROJECT
 
 ## 📸 Screenshot
 
-(Add game screenshot here)
+
 
 ---
 
@@ -86,8 +86,17 @@ This project is open-source and available under the MIT License.
 
 ---
 
+
+---
+
 ## 👨‍💻 Author
 
 **Ankit Kumar**
+
+---
+
+## ⭐ Support
+
+If you like this project, please ⭐ star this repository.
 
 GitHub: https://github.com/ankitr756208-hash
