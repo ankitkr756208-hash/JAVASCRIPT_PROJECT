@@ -7,7 +7,7 @@ This project demonstrates DOM manipulation, game logic implementation, and user 
 
 ## 🚀 Live Demo
 
-👉 https://ankitr756208-hash.github.io/JAVASCRIPT_PROJECT/
+👉 https://tictactoeankit7562.netlify.app/
 
 ---
 
